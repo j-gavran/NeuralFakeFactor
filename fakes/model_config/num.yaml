@@ -1,0 +1,47 @@
+name: numModel
+
+load_checkpoint: null # this is where the trained model checkpoint is located
+
+architecture_config:
+  model: ResNet
+
+  n_layers: 4
+  n_hidden: 128
+  act: ReLU
+  act_out: Softabs
+  batchnorm: false
+  dropout: 0.0
+
+  disable_embeddings: false
+  embeddings:
+    reduction: mean
+    numer_feature_wise_linear: false
+  post_embeddings: null
+
+training_config:
+  loss: bce
+
+  w_lambda: 0.0
+  ess_lambda: null
+
+  optimizer:
+    optimizer_name: AdamW
+    optimizer_params:
+      lr: 3.0e-4
+      weight_decay: 1.0e-5
+
+  scheduler:
+    scheduler_name: ReduceLROnPlateau
+    interval: epoch
+    scheduler_params:
+      factor: 0.5
+      patience: 5
+
+  gradient_clip_val: null
+
+  max_epochs: 100
+  early_stop_patience: 100
+  monitor: val_loss
+  save_top_k: 25
+  log_train_memory: false
+  model_save_path: null # this is where the path to the saved model is located

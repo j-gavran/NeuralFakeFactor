@@ -1,0 +1,7 @@
+defaults:
+  - _self_
+  - subtraction_plot@subtraction_plot
+  - density_plot@density_plot
+  - closure_plot@closure_plot
+  - model_ff_plot@model_ff_plot
+  - toy_plot@toy_plot

@@ -1,0 +1,40 @@
+closure_type: all
+
+atlas_label: null
+
+# opendata
+variables:
+  el_pt:
+    x_min: 25
+    x_max: 300
+    nbins: 50
+    logx: true
+    logy: true
+  met:
+    x_min: 30
+    x_max: 150
+    nbins: 50
+    logx: false
+    logy: true
+  el_eta:
+    x_min: 0.0
+    x_max: 2.47
+    nbins: 50
+    logx: false
+    logy: true
+  m_t:
+    x_min: 0
+    x_max: 60
+    nbins: 50
+    logx: false
+    logy: true
+  nn_weight:
+    x_min: 0.0
+    x_max: 10.0
+    nbins: 200
+    logy: true
+
+ff_standard_binning:
+  pt_bins: [25, 26, 27, 28, 30, 35, 40, 50, 55, 60, 70, 80, 100, 300]
+  abs_eta_bins: [0.0, 0.5, 1.0, 1.37, 1.52, 2, 2.5]
+  met_bins: [30, 300]

@@ -1,0 +1,85 @@
+min_logging_level: info
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .
+
+defaults:
+  - _self_
+  - dataset_config: opendata_electrons
+  - model_config: ratio
+  - hdf5_config: opendata_electrons
+
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+
+experiment_config:
+  accelerator: cpu
+
+is_CR: false
+
+convert_config:
+  ntuples_dir: /data0/jang/opendata/1LMET30
+  key: analysis
+  output_dir: null
+  step_size: 131072
+  num_workers: -1
+  multiprocessing_context: fork
+
+fill_histograms: true
+
+analysis_config:
+  scale_wzjets: true
+  el_pt_min: 25.0
+  njets_cut: [1, .inf]
+  met_cut: null
+  mT_cut: [60.0, 300.0] # [0.0, 60.0] for CR
+  fakes_method: ml  # "binned" or "ml"
+  binned_ff_path: /data0/jang/analysis/ml_results/closure/binned_ff.p
+
+plotting_config:
+
+  variables:
+    el_pt:
+      xlabel: $p_\mathrm{T}$ [GeV]
+      N_bins: 50
+    el_eta:
+      xlabel: $\eta$
+      N_bins: 50
+    met:
+      xlabel: $E_\mathrm{T}^\mathrm{miss}$ [GeV]
+      N_bins: 50
+    njets:
+      xlabel: $N_\mathrm{jets}$
+      range: [-0.5, 6.5]
+    m_t:
+      xlabel: $m_\mathrm{T}$ [GeV]
+      N_bins: 50
+      range: [60.0, 300.0]
+
+  mc_samples:
+    fakes:
+      label: Fakes
+      color: Green
+    W+jets:
+      label: W+jets
+      color: Orange
+    ttbar_inclusive:
+      label: $t\bar{t}$
+      color: Pink
+    singletop:
+      label: Single top
+      color: Red
+    Z+jets:
+      label: Z+jets
+      color: Yellow
+    diboson_opendata:
+      label: Diboson
+      color: Blue
+    # raretop:
+    #   label: Rare top
+    #   color: Gray
+    # ttH:
+    #   label: $t\bar{t}H$
+    #   color: Cyan

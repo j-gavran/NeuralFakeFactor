@@ -1,0 +1,30 @@
+name: toyDataset1D
+
+save_path: null
+
+dataset_composition:
+  loose_data: 2.0e+5
+  tight_data: 1.0e+5
+  loose_mc: 7.0e+5
+  tight_mc: 10.0e+5
+
+distributions:
+  data:
+    dist_name: signal
+    dist_params:
+      d: 5.0e-4
+      c: 3.0
+    weight_name: lognormal
+    weight_params: null
+  mc:
+    dist_name: signal
+    dist_params:
+      d: 3.0e-5
+      c: 4.0
+    weight_name: cauchy
+    weight_params:
+      x_0: 1.0
+      gamma: 0.2
+      clip_tails: 200.0
+  pt_min: 10
+  pt_max: 1000

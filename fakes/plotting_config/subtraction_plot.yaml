@@ -1,0 +1,41 @@
+atlas_label: null
+
+# electrons
+variables:
+  el_pt:
+    x_min: 25
+    x_max: 1000
+    nbins: 50
+    logx: true
+    logy: true
+  met:
+    x_min: 30
+    x_max: 100
+    nbins: 50
+    logx: false
+    logy: true
+  m_t:
+    x_min: 0
+    x_max: 60
+    nbins: 50
+    logx: false
+    logy: true
+  el_eta:
+    x_min: -2.47
+    x_max: 2.47
+    nbins: 50
+    logx: false
+    logy: true
+
+# [left edge, right edge, number of bins]
+weights:
+  data_prescales: [0, 500, 100]
+  data_out: [-1.0, 4.0, 100]
+  data_density: [-1.0, 20.0, 100]
+  data_sub: [-1.0, 2.0, 100]
+  data_reweighted: [-0.1, 1.1, 100]
+  mc_weights: [-100, 100, 100]
+  mc_out: [0.0, 5.0, 100]
+  mc_density: [0.0, 5.0, 100]
+  mc_sub: [0.0, 5.0, 100]
+  mc_reweighted: [-100, 100, 100]

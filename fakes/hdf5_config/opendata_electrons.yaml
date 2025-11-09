@@ -1,0 +1,73 @@
+particle_type: el
+
+data:
+  - met
+  - met_phi
+  - lep_n
+  - lep_charge
+  - lep_pt
+  - lep_eta
+  - lep_phi
+  - lep_type
+  - lep_isTrigMatched
+  - lep_isTightID
+  - lep_isLooseID
+  - lep_isTightIso
+  - lep_isLooseIso
+  - lep_isMediumID
+  - jet_n
+  - trigE
+  - jet_btag_quantile
+
+mc:
+  - mcWeight
+  - ScaleFactor_PILEUP
+  - ScaleFactor_ELE
+  - ScaleFactor_ElTRIGGER
+  - ScaleFactor_BTAG
+  - met
+  - met_phi
+  - lep_n
+  - lep_charge
+  - lep_pt
+  - lep_eta
+  - lep_phi
+  - lep_type
+  - lep_isTrigMatched
+  - lep_isTightID
+  - lep_isLooseID
+  - lep_isTightIso
+  - lep_isLooseIso
+  - lep_isMediumID
+  - jet_n
+  - trigE
+  - jet_btag_quantile
+
+output:
+  - weights
+  - met
+  - met_phi
+  - m_t
+  - el_charge
+  - el_pt
+  - el_eta
+  - el_phi
+  - el_type
+  - njets
+  - data_type
+
+enforce_types:
+  el_charge: int64
+  el_type: int64
+
+samples:
+  - Z+jets
+  - W+jets
+  - diboson_opendata
+  - raretop
+  - ttH
+  - singletop_inclusive_Wt_DR_dyn
+  - singletop_inclusive_noWt
+  - ttbar_inclusive
+  - ttbar_inclusive_sliced_HT
+  - ttbar_inclusive_sliced_MET

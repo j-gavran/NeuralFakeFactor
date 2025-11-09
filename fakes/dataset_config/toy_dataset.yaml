@@ -1,0 +1,28 @@
+name: toyDataset1D
+files: "*"
+
+stage_split_piles:
+  train: 512
+  val: 512
+  test: 0
+
+dataloader_kwargs:
+  batch_size: null
+  prefetch_factor: 2
+  num_workers: -1
+
+dataset_kwargs:
+  use_data_in_ratio: true
+
+features:
+  - toy_pt
+  - weights
+  - data_type
+  - toy_type
+
+feature_scaling:
+  scaler_type: standard
+  partial_fit: true
+  n_max: null
+  save_path: null
+  copy: true

@@ -1,0 +1,39 @@
+name: opendataElectrons
+files: "*"
+
+stage_split_piles:
+  train: 64
+  val: 64
+  test: 0
+
+dataloader_kwargs:
+  batch_size: 512
+  prefetch_factor: 2
+  num_workers: -1 # use -1 for all available cores
+
+dataset_kwargs:
+  use_data_in_ratio: true
+  pt_cut:
+    min: null
+    max: null
+
+crack_veto: true
+
+features:
+  - el_pt
+  - el_eta
+  - met
+  - m_t
+  - njets
+  - weights
+  - el_type
+  - data_type
+
+pt_slices: null
+
+feature_scaling:
+  scaler_type: standard
+  partial_fit: true
+  n_max: null
+  save_path: null
+  copy: true
