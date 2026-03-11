@@ -1,7 +1,5 @@
 # Neural Fake Factor Estimation Using Data-Based Inference
 
-The main code is located in [SeeSawML](https://github.com/j-gavran/SeeSawML) and is included as a submodule. This repository contains configuration files specific to the neural fake factor estimation article.
-
 ## How to run 
 
 All the settings are configured in the YAML files located in the `fakes/` directory. Follow these steps to run the code:

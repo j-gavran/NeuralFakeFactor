@@ -10,7 +10,6 @@ export ANALYSIS_ML_RESULTS_DIR="${ANALYSIS_ML_OUTPUT_DIR}/ml_results"
 export ANALYSIS_ML_MODELS_DIR="${ANALYSIS_ML_RESULTS_DIR}/models"
 export ANALYSIS_ML_LOGS_DIR="${ANALYSIS_ML_RESULTS_DIR}/logs"
 
-# If not set will use TNAnalysis venv, set to your own venv if needed
 export ANALYSIS_ML_VENV_PATH="path/to/your/venv" # Example: "/data0/jang/analysis/seesawml_venv"
 
 source "${ANALYSIS_ML_CODE_DIR}/modules/SeeSawML/seesaw/utils/setup/setup.sh"
