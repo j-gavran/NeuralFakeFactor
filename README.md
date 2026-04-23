@@ -1,5 +1,7 @@
 # Neural Fake Factor Estimation Using Data-Based Inference
 
+Arxiv link: https://arxiv.org/abs/2511.06972
+
 ## How to run 
 
 All the settings are configured in the YAML files located in the `fakes/` directory. Follow these steps to run the code:
